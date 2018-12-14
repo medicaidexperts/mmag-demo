@@ -1,0 +1,31 @@
+.contact-general-info {
+    max-width: 102rem;
+    font-size: 2.6rem;
+    line-height: 1.4;
+    font-family: $fontSerif;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 64px;
+}
+
+.section-wrapper.section-wrapper--about {
+    .section-info {
+        .section__desc--content {
+            margin-bottom: 1.6rem;
+            font-size: 2.1rem;
+        }
+        .embed-youtube {
+            margin: 2.6rem 0;
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

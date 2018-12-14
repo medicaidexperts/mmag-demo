@@ -1,0 +1,27 @@
+{
+  "short_name": "MMAG",
+  "name": "Medicare And Medicaid Advisory Group",
+  "icons": [
+    {
+      "src": "assets/favicon/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/favicon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/favicon-196x196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "white",
+  "theme_color": "#127081",
+  "color": "black",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

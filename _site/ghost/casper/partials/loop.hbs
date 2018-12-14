@@ -1,0 +1,42 @@
+<div class="twocolumn-wrapper">
+    <main class="main" aria-label="Content">
+        <section class="section-wrapper section-wrapper--blog">
+            <div class="section-info">
+                <h1 class="section__title">Blogs</h1>
+            </div>
+            <ul class="blog-list">
+                {{!-- This is the post loop - each post will be output using this markup --}}
+                {{#foreach posts}}
+                <article class="blog-post">
+                    <a href="{{url}}" class="blog-post-link">
+                        <div class="blog-post__image bg" style="background-image: url({{image}})"></div>
+                        <h3 class="blog-post__title">{{title}}</h3>
+                        <p class="blog-post__desc">{{excerpt words="26"}}</p>
+                    </a>
+                </article>
+                {{/foreach}}
+            </ul>
+            {{!-- Previous/next page links - displayed on every page --}} {{pagination}}
+        </section>
+    </main>
+    <aside class="aside">
+        <div class="aside__wrapper" data-sticky>
+            <div class="aside-info">
+                <h3 class="aside-info__title">Don’t be confused!</h3>
+                <p class="aside-info__desc">Book your FREE Consultation right now.</p>
+            </div>
+            <div class="contact__mode contact__mode--phone">
+                <p class="contact__label">CALL US AT</p>
+                <a class="contact__info" href="tel:6467459122">646-745-9122</a>
+            </div>
+            <div class="contact__mode contact__mode--input">
+                <p class="contact__label">OR HAVE US CALL YOU BACK</p>
+                <input id="phone-aside-callback" class="contact__input contact__input--white" type="tel" placeholder="Enter your phone number">
+                <button class="cta cta--medium cta--orange do-submitPhoneNumber" data-inputId="phone-aside-callback">SUBMIT PHONE NUMBER</button>
+            </div>
+            <div class="contact-warning">
+                <p class="contact-warning__msg">Its not a call to sell our services. We will genuinely analyse your case and direct you into right direction. Then you may or may not choose to hire us. Just let us help you. </p>
+            </div>
+        </div>
+    </aside>
+</div>

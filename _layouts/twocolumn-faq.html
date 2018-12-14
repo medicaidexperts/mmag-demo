@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5VF7FZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- <link rel="stylesheet" href="/assets/css/jquery.accordion.css"> -->
+    <style>
+        [data-accordion] [data-content] {
+            overflow: hidden;
+            max-height: 0;
+        }
+        [data-accordion] {
+            line-height: 1;
+        }
+        [data-control],
+        [data-content] > * {
+            border-bottom: 1px solid #888;
+            padding: 10px;
+        }
+        [data-content] [data-accordion] {
+            border: 0;
+            padding: 0;
+        }
+        [data-accordion] [data-control] {
+            position: relative;
+            padding-right: 40px;
+        }
+        [data-accordion] > [data-control]:after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            font-size: 25px;
+            font-weight: 200;
+            color: #444;
+            height: 15px;
+            width: 24px;
+            background: url('../images/down.png') center center no-repeat;
+            background-size: 50%;
+        }
+        [data-accordion].open > [data-control]:after {
+            -webkit-transform: rotate(-180deg); 
+            -ms-transform: rotate(-180deg); 
+            transform: rotate(-180deg); 
+        }
+    </style>
+
+    {% include header.html %}
+
+    <div class="twocolumn-wrapper">
+        <main class="main" aria-label="Content">
+            {{ content }}
+        </main>
+        <aside class="aside">
+            {% include aside.html %}
+        </aside>
+    </div>
+
+    {% include footer.html %}
+
+    <script src="/assets/js/jquery.accordion.js"></script>
+    <script>
+    $('.faq__question').accordion({
+        "transitionSpeed": 300
+    });
+    </script>
+    <script>
+        $('.faq__question').bind("accordion.close", function () {
+            setTimeout(function () {
+                var targetToScroll = $('.faq__question.open');
+                if (targetToScroll && targetToScroll.length) {
+                    $('html,body').animate({scrollTop: targetToScroll.offset().top - 60});
+                }
+            }, 350);
+            
+        });
+    </script>
+
+</body>
+
+</html>

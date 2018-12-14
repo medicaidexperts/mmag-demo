@@ -1,0 +1,186 @@
+@mixin contactPhoneNumberStyle {
+    font-size: 3.4rem;
+    color: $black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+header {
+    @include mobileLarge {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.header__bar {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    padding: 20px $space-horizontal;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        img {
+            height: 5.4rem;
+            width: 37rem;
+            @include laptop {
+                height: 4.6rem;
+                width: 29rem;
+            }
+            @include mobileMedium {
+                width: 100%;
+                height: 7.5rem;
+            }
+        }
+    }
+    @include tablet {
+        padding: 16px $space-horizontal-smaller;
+    }
+    @include mobileMedium {
+        padding: 14px $space-horizontal-smallest;
+    }
+    .header__info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include mobileLarge {
+            display: none;
+        }
+        .info__message {
+            @include tablet {
+                display: none;
+            }
+        }
+        .info__message p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 2.2rem;
+            @include mobileLarge {
+                display: none;
+            }
+            strong {
+                color: $orange;
+                font-weight: 800;
+            }
+        }
+        .info__phone a {
+            margin-left: 20px;
+            @include contactPhoneNumberStyle;
+        }
+    }
+}
+
+.header__nav {
+    background: $teal;
+    padding: 0px $space-horizontal;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transition: 0.3s;
+    @include tablet {
+        padding: 0px $space-horizontal-smaller;
+    }
+    @include mobileLarge {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        flex-wrap: wrap;
+    }
+    @include mobileMedium {
+        padding: 0px $space-horizontal-smallest;
+    }
+    &.expanded {
+        @include mobileLarge {
+            max-height: 1000px;
+            justify-content: space-between;
+            align-items: stretch;
+            opacity: 1;
+            border-top: 1px solid white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 12px 20px;
+        margin: 8px 0px;
+        transition: 0.3s;
+        &.active, &:hover {
+            background: $tealDarker;
+            border-radius: 2px;
+        }
+        @include tablet {
+            padding: 14px;
+        }
+        @include mobileLarge {
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 1.6rem;
+            width: 50%;
+        }
+        &:first-of-type {
+            &:not(.active):not(:hover) {
+                padding-left: 0;
+            }
+            @include mobileLarge {
+                padding-left: 10px !important;
+            }
+        }
+        &:last-of-type {
+            margin-left: auto;
+            @include mobileLarge {
+                width: 100%;
+            }
+            &:not(.active):not(:hover) {
+                padding-right: 0;
+            }
+        }
+        &:last-of-type {
+            @include mobileLarge {
+                margin-left: 0px;
+                padding-right: 10px !important;
+            }
+        }
+        
+    }
+}
+
+.nav-controls {
+    display: none;
+    background: $teal;
+    padding: 0px $space-horizontal;
+    font-size: 2rem;
+    justify-content: space-between;
+    @include tablet {
+        padding: 0px $space-horizontal-smaller;
+    }
+    @include mobileLarge {
+        display: flex;
+    }
+    @include mobileMedium {
+        padding: 0px $space-horizontal-smallest;
+    }
+    .info__phone {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        a {
+            @include contactPhoneNumberStyle;
+            color: white;
+        }
+    }
+    .controls {
+        display: flex;
+        align-items: center;
+        .control {
+            padding: 20px;
+            margin-right: -20px;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}

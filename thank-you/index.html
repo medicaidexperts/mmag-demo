@@ -1,0 +1,24 @@
+---
+layout: onecolumn
+activePage: 'thankyou'
+sitemap:
+  exclude: 'yes'
+title: Thank You for submitting contact details - Medicare And Medicaid Advisory Group
+description: Thanks for submitting your contact detail. We will reach to you within 48 hours to help you.
+---
+
+<script>
+    document.body.className += " body-thankyou";
+</script>
+<section class="section-wrapper section-wrapper--thankyou">
+    <div class="section-image bg"></div>
+    <div class="section-info">
+        <h1 class="section__title">Thank You for Submitting your Phone Number</h1>
+        <p class="section__desc--content">Our expert will be contacting you within 24 to 48 hours to help you.</p>
+        <div class="contact__mode contact__mode--phone">
+            <p class="contact__label">YOU CAN ALSO CALL US AT</p>
+            <a class="contact__info" href="tel:{{site.data.globals.contactNumberWithoutDashes}}">{{site.data.globals.contactNumber}}</a>
+        </div>
+        <a href="/" class="cta cta--medium cta--orange">OR Go back to HOME</a>
+    </div>
+</section>

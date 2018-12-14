@@ -1,0 +1,44 @@
+.section-wrapper--events {
+    .events__heading {
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 24px;
+    }
+    .events-type-container {
+        @include mobileLarge {
+            &:last-of-type .events__listing {
+                margin-bottom: 0px;
+            }
+        }
+        .events__listing {
+            margin-bottom: 48px;
+            .event {
+                background-color: rgba(0, 0, 0, 0.05);
+                border-radius: 0.8rem;
+                margin: 16px 0px;
+                padding: 3.2rem;
+                .event__name {
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                    margin-bottom: 1.2rem;
+                    line-height: 1.3;
+                }
+                .event__date,
+                .event__location {
+                    font-size: 1.8rem;
+                    margin-bottom: 1.2rem;
+                    line-height: 1.3;
+                }
+                .event__desc {
+                    font-size: 1.6rem;
+                    margin-bottom: 1rem;
+                    line-height: 1.6;
+                    max-width: 84%;
+                    @include laptop {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

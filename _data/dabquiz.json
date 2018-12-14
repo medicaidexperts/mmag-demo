@@ -1,0 +1,145 @@
+
+{
+    "questions": [
+        {
+            "id": 1,
+            "image": "/assets/svg/quiz-flag.svg",
+            "question": "Are you currently receiving homecare?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto2"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto2"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "image": "/assets/svg/quiz-grand.svg",
+            "question": "I am a person with disabilities,I am an older individual, or I am blind",
+            "question": "I am an older individual",
+            "question": "I am blind",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto3"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "image": "/assets/svg/quiz-family-2-away.svg",
+            "question": "I feel that my home is in jeopardy,I am finding home care to be costly, I am struggling to finance my home health care workers, My savings are dwindling, I am compromising my care to save money",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto4"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto13"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "image": "/assets/svg/quiz-family-1.svg",
+            "question": "Did you know that Medicaid have a program specifically for those with disabilities, older individuals, and the blind?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-neutral"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-success"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "image": "/assets/svg/quiz-family-2.svg",
+            "question": "Are you dwindling your savings?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto8"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto5"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "image": "/assets/svg/quiz-family-3.svg",
+            "question": "Are you compromising care to save money?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto5"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Do you know you qualify for services under the disabled aged and blind program?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto6"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Are you finding it hard to finance your home care workers?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },      
+    ],
+    "results": [
+    ]
+}

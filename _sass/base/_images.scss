@@ -1,0 +1,71 @@
+// ------------------------------
+// -----------Homepage-----------
+// ------------------------------
+
+
+#img-homepage-banner:before {
+    background-image: url(/assets/images/main-banner.jpg);
+    @include mobileLarge {
+        background-image: none;
+    }
+}
+#img-story-morton {
+    background-image: url(/assets/images/story-morton.jpg);
+}
+#img-story-arthur {
+    background-image: url(/assets/images/story-arthur.jpg);
+}
+
+#img-our-story-big {
+    background-image: url(/assets/images/our-story-ginalisa.jpg);
+}
+#img-our-story-small1 {
+    background-image: url(/assets/images/our-story-tara1.jpg);
+}
+#img-our-story-small2 {
+    background-image: url(/assets/images/our-story-tara2.jpg);
+}
+
+
+// ------------------------------
+// -----------Service------------
+// ------------------------------
+
+
+#img-service-list-hse {
+    background-image: url(/assets/images/service-list-hse.jpg);
+}
+#img-service-list-ha {
+    background-image: url(/assets/images/service-list-ha.jpg);
+}
+#img-service-list-ep {
+    background-image: url(/assets/images/service-list-ep.jpg);
+}
+#img-service-list-mo {
+    background-image: url(/assets/images/service-list-mo.jpg);
+}
+#img-service-detail-hse:before {
+    background-image: url(/assets/images/service-hse.jpg);
+}
+#img-service-detail-ha:before {
+    background-image: url(/assets/images/service-ha.jpg);
+}
+#img-service-detail-ep:before {
+    background-image: url(/assets/images/service-ep.jpg);
+}
+#img-service-detail-mo:before {
+    background-image: url(/assets/images/service-mo.jpg);
+}
+
+
+// ------------------------------
+// ---------Story Detail---------
+// ------------------------------
+
+
+#img-story-detail-ginalisa:before {
+    background-image: url(/assets/images/our-story-ginalisa.jpg);
+}
+#img-story-others:before {
+    background-image: url(/assets/images/story-others.jpg);
+}

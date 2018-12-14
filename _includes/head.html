@@ -1,0 +1,86 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <link rel="stylesheet" href="{{ " /assets/css/style.css " | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{%if page.image %}{{ page.image }}{% else %}{{ site.logo-social }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <!-- <meta name="twitter:card" content="summary"> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:site" content="@{{ site.social_twitter }}">
+    <meta name="twitter:creator" content="@{{ site.social_twitter }}">
+    <meta name="twitter:image" content="{{ site.url }}{%if page.image %}{{ page.image }}{% else %}{{ site.logo-social }}{% endif %}">
+    <meta name="theme-color" content="#127081">
+    <link type="application/atom+xml" rel="alternate" href="{{ site.url }}/blog/rss/" title="{{ site.title }} | Blog">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{ site.title }}",
+        "image": "{{ site.url }}{{ site.logo }}",
+        "logo": "{{ site.url }}{{ site.logo }}",
+        "telephone": "{{ site.data.globals.contactNumber }}",
+        "email": "{{ site.data.globals.email }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3 Columbus Circle, 15th Floor",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "addressCountry": "US",
+            "postalCode": "10019"
+        },
+        "geo":{
+            "@type":"GeoCoordinates",
+            "latitude":40.7668877,
+            "longitude":-73.9844328
+        },
+        "hasMap": "https://goo.gl/maps/1NqzhriUQFv",
+        "sameAs": ["{{site.data.urls.social-facebook}}","{{site.data.urls.social-twitter}}", "{{site.data.urls.social-youtube}}","{{site.data.urls.social-linkedin}}"],
+        "url": "{{ site.url }}"
+    }
+    </script>
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{site.url}}/assets/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.url}}/assets/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.url}}/assets/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.url}}/assets/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{site.url}}/assets/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{site.url}}/assets/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{site.url}}/assets/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{site.url}}/assets/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="{{site.url}}/assets/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="{{site.url}}/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="{{site.url}}/assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{site.url}}/assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{{site.url}}/assets/favicon/favicon-128.png" sizes="128x128" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="{{ site.title }}"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="{{site.url}}/assets/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="{{site.url}}/assets/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="{{site.url}}/assets/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="{{site.url}}/assets/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="{{site.url}}/assets/favicon/mstile-310x310.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N5VF7FZ');</script>
+    <!-- End Google Tag Manager -->
+
+</head>

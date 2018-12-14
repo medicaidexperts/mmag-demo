@@ -1,0 +1,8 @@
+User-agent: *
+Sitemap: https://mmag.org/sitemap.xml
+Disallow: /dev-blog/
+Disallow: /ghost/
+Disallow: /thank-you/
+Disallow: /quiz/may-qualify-for-medicaid/
+Disallow: /quiz/not-qualified-for-medicaid/
+Disallow: /quiz/qualified-for-medicaid/

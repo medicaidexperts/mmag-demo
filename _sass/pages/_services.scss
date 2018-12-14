@@ -1,0 +1,78 @@
+.body-services {
+    .twocolumn-wrapper main {
+        // background: #eee !important;
+        padding-bottom: 0px !important;
+    }
+}
+
+.service-list {
+    .service-list-item {
+        margin-bottom: 4rem;
+        & > a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            @include mobileLarge {
+                flex-direction: column;
+            }
+        }
+        @include mobileLarge {
+            background: $white;
+            width: 100vw;
+            margin-left: -#{$space-horizontal-smaller};
+            padding: $space-horizontal-smaller;
+            margin-bottom: 0rem;
+            margin-top: 2rem;
+        }
+        @include mobileMedium {
+            margin-left: -#{$space-horizontal-smallest};
+            padding: $space-horizontal-smallest;
+        }
+        .service-list-item__img {
+            min-width: 280px;
+            margin-right: 32px;
+            background-position: top;
+            @include tablet {
+                height: 180px;
+                width: 220px;
+                min-width: 220px;
+                margin-bottom: 20px;
+            }
+            @include mobileSmall {
+                min-width: 100%;
+                margin-right: 0px;
+                width: 100%;
+                height: 160px;
+            }
+        }
+        .service-list-item__info {
+            .service__title {
+                font-weight: 700;
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 1.3rem;
+                @include mobileMedium {
+                    font-size: 2.5rem;
+                    margin-bottom: 1.7rem;
+                }
+            }
+            .service__desc {
+                font-size: 2.1rem;
+                color: rgba(0, 0, 0, 0.6);
+                line-height: 1.25;
+                margin-bottom: 1.3rem;
+                font-family: $fontSerif;
+                @include mobileMedium {
+                    font-size: 2.3rem;
+                    margin-bottom: 2rem;
+                }
+            }
+            .cta {
+                @include mobileMedium {
+                    float: right;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://mmag.org/assets/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://mmag.org/assets/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://mmag.org/assets/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://mmag.org/assets/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://mmag.org/assets/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://mmag.org/assets/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://mmag.org/assets/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://mmag.org/assets/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://mmag.org/assets/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://mmag.org/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://mmag.org/assets/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://mmag.org/assets/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://mmag.org/assets/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="{{ site.title }}" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://mmag.org/assets/favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="https://mmag.org/assets/favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="https://mmag.org/assets/favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="https://mmag.org/assets/favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="https://mmag.org/assets/favicon/mstile-310x310.png" />
+
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="https://mmag.org/assets/css/style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700|Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} nav-closed">
+
+    {{!-- The blog navigation links --}}
+    {{navigation}}
+
+    <div class="site-wrapper">
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+        {{!-- The tiny footer at the very bottom --}}
+        <footer>
+            <div class="info">
+                <p>© COPYRIGHT 2016 MEDICARE & MEDICAID <br>ADVISORY GROUP · ALL RIGHTS RESERVED</p>
+                <div class="social">
+                    <a target="_blank" href="https://www.facebook.com/MedicareMedicaidAG">
+                        <svg class="icon icon-facebook">
+                            <use xlink:href="/assets/svg/social/social-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/MMAdvisoryGroup">
+                        <svg class="icon icon-twitter">
+                            <use xlink:href="/assets/svg/social/social-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCZVjUwdGXOpnmnPFmH016fg">
+                        <svg class="icon icon-youtube">
+                            <use xlink:href="/assets/svg/social/social-defs.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/medicare-&-medicaid-advisory-group/">
+                        <svg class="icon icon-linkedin">
+                            <use xlink:href="/assets/svg/social/social-defs.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="company">
+                <div class="title">Company</div>
+                <div class="links">
+                    <a href="/about/">About Us</a>
+                    <a href="/our-services/">Our Services</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/contact/">Contact Us</a>
+                </div>
+            </div>
+            <div class="services">
+                <div class="title"><a href="/our-services/">Services</a></div>
+                <div class="links">
+                    <a href="/our-services/homecare-services-eligibility/">Homecare Services Eligibility</a>
+                    <a href="/our-services/healthcare-advisors/">Healthcare Advisors</a>
+                    <a href="/our-services/estate-planning/">Estate Planning</a>
+                    <a href="/our-services/medicare-options/">Medicare Options</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script src="https://mmag.org/assets/js/sticky.js"></script>
+    <script src="https://mmag.org/assets/js/main.js"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}" async></script>
+    {{!-- The main JavaScript file for Casper --}}
+    <!-- <script type="text/javascript" src="{{asset "js/index.js"}}"></script> -->
+
+</body>
+</html>

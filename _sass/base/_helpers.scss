@@ -1,0 +1,36 @@
+%psuedo {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg {
+    background-color: #eee;
+    background-image: url(/assets/images/placeholder.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg--before {
+    &:before {
+        @extend %psuedo;
+        @extend .bg;
+        z-index: -1;
+    }
+}
+.bg-color--after {
+    &:after {
+        @extend %psuedo;
+        z-index: -1;
+    }
+}
+
+
+// ======= Utils =========
+
+.is-hidden {
+    display: none !important;
+}

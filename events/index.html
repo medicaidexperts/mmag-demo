@@ -1,0 +1,42 @@
+---
+layout: twocolumn
+activePage: 'events'
+sitemap:
+  exclude: 'yes'
+title: Upcoming and Past events - Medicare And Medicaid Advisory Group
+description: Get info of all the past and upcoming events related to Medicare And Medicaid Advisory Group
+---
+<section class="section-wrapper section-wrapper--events">
+    <div class="section-info">
+        <h1 class="section__title">Events</h1>
+        <p class="section__desc--content">This page has list of all our upcoming and past events.</p>
+    </div>
+    <section class="events-container">
+        <div class="events-type-container">
+            <h2 class="events__heading">Upcoming Events</h2>
+            <ul class="events__listing">
+                {% for event in site.data.events.upcoming %}
+                <li class="event">
+                    <h3 class="event__name">{{ event.name }}</h3>
+                    <p class="event__date">{{ event.datetime }}</p>
+                    <p class="event__location">{{ event.address }}</p>
+                    <p class="event__desc">{{ event.description }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="events-type-container">
+            <h2 class="events__heading">Past Events</h2>
+            <ul class="events__listing">
+                {% for event in site.data.events.past %}
+                <li class="event">
+                    <h3 class="event__name">{{ event.name }}</h3>
+                    <p class="event__date">{{ event.datetime }}</p>
+                    <p class="event__location">{{ event.address }}</p>
+                    <p class="event__desc">{{ event.description }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</section>

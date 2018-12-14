@@ -1,0 +1,281 @@
+// ========== CTA BUTTONS ===========
+.cta {
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    &:disabled {
+        opacity: 0.75;
+        cursor: not-allowed;
+        transition: 0.3s;
+        filter: grayscale(0.3);
+    }
+}
+
+.cta--big {
+    padding: 22px 40px;
+    font-size: 2.2rem;
+    @include mobileSmall {
+        padding: 16px 24px;
+    }
+}
+
+.cta--medium {
+    padding: 14px 24px;
+    font-size: 1.8rem;
+    @include mobileSmall {
+        padding: 13px 20px;
+    }
+}
+
+.cta--small {
+    padding: 12px 16px;
+    font-size: 1.6rem;
+}
+
+.cta--orange {
+    color: white;
+    background-color: $orange;
+    &:hover {
+        background-color: $orangeDarker;
+    }
+}
+
+.cta--teal {
+    color: white;
+    background-color: $teal;
+    &:hover {
+        background-color: $tealDarker;
+    }
+}
+
+// =========== BLOG POST CARD ===========
+.posts {
+    display: flex;
+    flex-direction: row;
+    @include mobileLarge {
+        flex-direction: column;
+    }
+    .post {
+        text-decoration: none;
+        width: 30%;
+        background: $white;
+        margin-right: 5%;
+        color: $black;
+        @include mobileLarge {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        .post__image {
+            height: 140px;
+        }
+        .post__content {
+            padding: 22px 20px;
+            .post__title {
+                font-size: 1.8rem;
+                line-height: 1.4;
+                font-weight: 600;
+                margin-bottom: 14px;
+                min-height: 2.8em;
+            }
+            .post__date {
+                font-size: 1.5rem;
+                color: #727272;
+            }
+        }
+    }
+}
+
+// =========== CONTACT WIDGETS ============
+.contact__mode {
+    font-weight: 600;
+    @include tablet {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    &:last-of-type {
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+    &.contact__mode--input {
+        max-width: 30%;
+        @include tablet {
+            max-width: 60%;
+        }
+        @include mobileMedium {
+            max-width: 80%;
+        }
+    }
+    .contact__label {
+        font-size: 1.8rem;
+        color: $teal;
+        margin-bottom: 2.4rem;
+        @include mobileMedium {
+            font-size: 2.7rem;
+            line-height: 1.3;
+        }
+    }
+    .contact__info {
+        color: black;
+        font-size: 3.4rem;
+        text-decoration: none;
+        line-height: 4.2rem;
+        font-weight: 700;
+        span {
+            display: block;
+            color: $orange;
+            font-size: 2.3rem;
+            &:hover {
+                color: $orangeDarker;
+            }
+        }
+    }
+    &.contact__mode--address {
+        @include tablet {
+            width: 100%;
+        }
+        .contact__info {
+            font-size: 2.7rem;
+            br {
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+    }
+    .contact__input {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1.8rem;
+        background: rgba(0, 0, 0, 0.1);
+        margin-bottom: 18px;
+        outline: 0;
+        border: 0;
+        font-weight: 600;
+        border-radius: 2px;
+        &.contact__input--white {
+            background: $white;
+            font-weight: 600;
+            color: $black;
+        }
+    }
+    button.cta {
+        width: 100%;
+    }
+}
+
+// ========= Story Content =============
+.story {
+    width: 50%;
+    margin-left: auto;
+    padding: 20px 0px;
+    @include tablet {
+        width: 100%;
+    }
+    .story__heading {
+        font-size: 1.8rem;
+        color: $teal;
+        font-weight: 500;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+    }
+    .story__title {
+        font-size: 2.9rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin: 20px auto 20px 0px;
+        max-width: 68rem;
+    }
+    .story__desc {
+        font-size: 2.2rem;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: $fontSerif;
+        line-height: 1.4;
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+    .story__sign {
+        margin-bottom: 32px;
+        .sign__name {
+            display: block;
+            font-family: $fontCursive;
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+        .sign__designation {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: $fontSanSerif;
+        }
+    }
+}
+
+// --------- COntact Map ------------
+.contact-map {
+    margin-top: 64px;
+    .map__image {
+        min-height: 460px;
+        background-image: url(/assets/images/map-large.png);
+        @include tablet {
+            min-height: 400px;
+        }
+        @include mobileLarge {
+            min-height: 310px;
+            background-image: url(/assets/images/map-medium.png);
+        }
+        @include mobileMedium {
+            min-height: 220px;
+            background-image: url(/assets/images/map-small.png);
+        }
+    }
+    .cta.cta--medium {
+        margin: 20px 0px;
+    }
+    .map__address {
+        font-size: 1.9rem;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+}
+
+// -----------Form Submit Loder------------
+.formSubmitLoader {
+    position: fixed;
+    top: 0;
+    height: 3px;
+    background: rgb(18, 112, 129);
+    width: 100vw;
+    z-index: 100;
+
+    &.active:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 10vw;
+        background: rgba(255, 255, 255, 0.69);
+        animation: progressLeftRight 1.5s cubic-bezier(0.58, -0.01, 0.34, 0.96) infinite;
+    }
+}
+
+@keyframes progressLeftRight {
+    0% {
+        transform: translateX(-10vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}

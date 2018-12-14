@@ -1,0 +1,20 @@
+---
+layout: twocolumn
+activePage: 'press'
+title: Press | Medicaid and Medicaid Advisory Group
+description: Media loves us. Explore the articles we have been featured in. 
+---
+<section class="section-wrapper section-wrapper--press">
+    <div class="section-info">
+        <h1 class="section__title">Press Room</h1>
+        <p class="section__desc">Time and about our mission to bring more awareness in society for their health related rights have been featured in various online and print media.</p>
+    </div>
+    <div class="press-list">
+        {% for news in site.data.press %}
+        <a href="{{ news.url }}" class="press-list-item">
+            <div class="press-item-image bg" style="background-image: url({{ news.image }})"></div>
+            <h3 class="press-item-content">{{ news.headline }}</h3>
+        </a>
+        {% endfor %}
+    </div>
+</section>

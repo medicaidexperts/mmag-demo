@@ -1,0 +1,253 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "image": "/assets/svg/quiz-flag.svg",
+            "question": "Are you a caregiver?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto2"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto3"
+                }
+            ]
+        },
+{
+            "id": 2,
+            "image": "/assets/svg/quiz-grand.svg",
+            "question": "Are you struggling to juggle your career and caregiving?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto11"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto12"
+                }
+            ]
+        },
+{
+            "id": 3,
+            "image": "/assets/svg/quiz-family-2-away.svg",
+            "question": "Are you inquiring on behalf of a loved one?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto7"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto7"
+                }
+            ]
+        },
+
+{
+            "id": 4,
+            "image": "/assets/svg/quiz-family-1.svg",
+            "question": "Are you receiving medicaid?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto14"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto5"
+                }
+            ]
+        },
+{
+            "id": 5,
+            "image": "/assets/svg/quiz-family-2.svg",
+            "question": "Is that person recieving homecare?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto8"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto8"
+                }
+            ]
+        },
+ {
+            "id": 6,
+            "image": "/assets/svg/quiz-family-3.svg",
+            "question": "A person with disabilities,A senior (65+),An individual who is blind",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto9"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        },
+ {
+            "id": 7,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Are you the primary caregiver of a loved one?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto14"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto12"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Do you have 24 hours home care?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto9"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        },
+        {
+
+             "id": 9,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Did you know that they may qualify for a tailored Medicaid program specifically seniors,  people with disabilities, and the blind?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Is your loved one receiving home care?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-neutral"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+  {
+            "id": 11,
+            "hint": "Right side",
+            "image": "/assets/svg/quiz-family-1.svg",
+            "question": "Are you afraid of diminishing your loved one’s funds due to expensive health care and home care costs?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto10"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto10"
+                }
+            ]
+
+        },
+        {
+            "id": 12,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Do you have less than 8 hours home care?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto8"
+                }
+            ]
+        },
+
+        {
+            "id": 13,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Would you like more than 8 hours of home care?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto8"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "hint": "Right side",
+            "image": "/assets/svg/quiz-family-2.svg",
+            "question": "Are you seeking 24 hours of home care?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto11"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        }
+    ],
+
+
+
+    "results": [
+    ]
+}

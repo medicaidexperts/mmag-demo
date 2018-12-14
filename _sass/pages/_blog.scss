@@ -1,0 +1,59 @@
+// Tag pages
+header.tag-head {
+    display: none;
+}
+.blog-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 0;
+    @include mobileMedium {
+        flex-direction: column;
+    }
+    .blog-post {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        padding-right: 28px;
+        width: 50%;
+        &:nth-of-type(even) {
+            @include mobileLarge {
+                padding-right: 0px;
+            }
+        }
+        &:not(:nth-of-type(-n+2)) {
+            width: 100%;
+            @include mobileLarge {
+                padding-right: 0px;
+            }
+        }
+        @include mobileMedium {
+            width: 100%;
+            padding-right: 0px;
+        }
+        .blog-post-link {
+            text-decoration: none;
+            color: initial;
+        }
+        .blog-post__image {
+            height: 220px;
+            margin-bottom: 20px;
+        }
+        .blog-post__title {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 1.2;
+            margin-bottom: 1.3rem;
+        }
+        .blog-post__desc {
+            font-size: 2.1rem;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.25;
+            margin-bottom: 1.3rem;
+            font-family: $fontSerif;
+            &:after {
+                content: '...';
+            }
+        }
+    }
+}

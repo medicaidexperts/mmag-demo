@@ -1,0 +1,53 @@
+.aside {
+    background: rgba(0,0,0,0.1);
+    .aside__wrapper {
+        padding: 36px;
+        @include tablet {
+            padding: 24px;
+        }
+        .aside-info {
+            .aside-info__title {
+                font-size: 2.4rem;
+                font-weight: 700;
+                margin-bottom: 2.4rem;
+                line-height: 1.3;
+                text-transform: uppercase;
+            }
+            .aside-info__desc {
+                font-size: 2.3rem;
+                font-weight: 600;
+                line-height: 1.4;
+                margin-bottom: 32px;
+            }
+        }
+        .contact__mode {
+            margin-bottom: 32px;
+            .contact__label {
+                margin-bottom: 16px;
+            }
+            &.contact__mode--input {
+                max-width: 100%;
+                @include mobileLarge {
+                    max-width: 50rem;
+                }
+                .contact__input {
+                    margin-bottom: 14px;
+                }
+            }
+            &.contact__mode--phone {
+                .contact__info {
+                    line-height: 1;
+                }
+                .contact__label {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .contact-warning {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: rgba(0,0,0,0.6);
+        }
+    }
+}
+

@@ -1,0 +1,90 @@
+$local-height-header: 360px;
+$local-height-header-smaller: 320px;
+
+.section-wrapper--service-detail {
+    .service-header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: $local-height-header;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        z-index: 0;
+        padding: 20px $space-horizontal;
+        text-shadow: 0.25rem 0.25rem 0.25rem rgba(0,0,0,0.7);
+        @include tablet {
+            padding: 20px $space-horizontal-smaller;
+        }
+        @include mobileMedium {
+            height: $local-height-header-smaller;
+            padding: 20px $space-horizontal-smallest;
+        }
+        &:after {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .service-title {
+            font-size: 4.2rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .service-subtitle {
+            font-size: 2.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 16px;
+            line-height: 1.4;
+            font-family: $fontSerif;
+        }
+    }
+    .service-content {
+        margin-top: $local-height-header;
+        font-size: 2.1rem;
+        font-family: Crimson Text;
+        line-height: 1.4;
+        @include mobileMedium {
+            margin-top: $local-height-header-smaller;
+        }
+        ol li {
+            list-style-type: decimal;
+            margin-left: 2rem;
+        }
+        ul li {
+            list-style-type: disc;
+            margin: 1rem 0 1rem 4rem;
+        }
+        h2 {
+            font-size: 3.4rem;
+            font-weight: 600;
+            margin: 0 0 2rem;
+            line-height: 1.3;
+        }
+        h3 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin: 2rem 0;
+            line-height: 1.3;
+        }
+        strong {
+            font-weight: 600;
+        }
+        em {
+            font-style: italic;
+        }
+        .content__subsection {
+            margin-top: 3.2rem;
+        }
+    }
+}
+
+.section-wrapper--service-detail#service-estate-planning {
+    .service-content {
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+

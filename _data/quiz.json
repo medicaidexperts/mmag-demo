@@ -1,0 +1,247 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "image": "/assets/svg/quiz-flag.svg",
+            "question": "Are you currently on Medicare?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto2"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto3"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "image": "/assets/svg/quiz-grand.svg",
+            "question": "Are you 65+, disabled and/or blind?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto13"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto12"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "image": "/assets/svg/quiz-family-2-away.svg",
+            "question": "Are you under 65 years of age?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto4"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto13"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "image": "/assets/svg/quiz-family-1.svg",
+            "question": "Do you live in a single person home?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto7"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto5"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "image": "/assets/svg/quiz-family-2.svg",
+            "question": "Do you live in a two person home?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto8"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto6"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "image": "/assets/svg/quiz-family-3.svg",
+            "question": "Do you live in a three person home?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto9"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Does your income (any money received from Social Security, pension, interest on savings, gifts, and IRA or annuity distributions) equal $825/m or less?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Does your income, (any money received from Social Security, pension, interest on savings, gifts, and IRA or annuity distributions) equal $1,209/m or less?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Does your income, (any money received from Social Security, pension, interest on savings, gifts, and IRA or annuity distributions) equal $1,390/m or less?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "end-success"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Are your resources (any Certificates & savings, stocks, etc.) less than or equal to $14,850?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto7"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "image": "/assets/svg/quiz-money.svg",
+            "question": "Are your resources (any Certificates & savings, stocks, etc.) Less than or equal to $21,750?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto7"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-failure"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "hint": "Right side",
+            "image": "/assets/svg/quiz-family-2-away.svg",
+            "question": "Are you under 65 years of age?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto4"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto3"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "hint": "Right side",
+            "image": "/assets/svg/quiz-family-1.svg",
+            "question": "Do you live in a single person home?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto10"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "goto14"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "hint": "Right side",
+            "image": "/assets/svg/quiz-family-2.svg",
+            "question": "Do you live in a two person home?",
+            "options": [
+                {
+                    "option": "YES",
+                    "color": "#2ecc71",
+                    "onSelection": "goto11"
+                },
+                {
+                    "option": "NO",
+                    "color": "#ff4440",
+                    "onSelection": "end-neutral"
+                }
+            ]
+        }
+    ],
+    "results": [
+    ]
+}

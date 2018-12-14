@@ -1,0 +1,174 @@
+---
+layout: onecolumn
+activePage: 'quiz'
+title: Do you Qualify for Medicaid?
+description: Just answer a few questions to know whether you qualify for Medicaid services or not. Or simply contact us at 646-745-9122.
+---
+
+<section class="section-wrapper section-wrapper--quiz">
+    <div class="section-info">
+        <h1 class="section__title">Do I qualify for Medicaid?</h1>
+        <p class="section__desc--content">Just answer these few questions to find out if your are eligible for Medicaid:</p>
+    </div>
+    <section class="full-width quiz__wrapper">
+        <div class="quiz__area">
+            <ul class="quiz__cards">
+                {% for question in site.data.quiz.questions %}
+                <li data-question-id="{{question.id}}" class="quiz__card {% if forloop.first %} visible {% endif %}">
+                    <div class="quiz__image">
+                        <div class="bg" style="background-image: url({{question.image}})"></div>
+                    </div>
+                    <div class="quiz__content">
+                        <p class="quiz__question">{{ question.question }}</p>
+                        <div class="quiz__options">
+                            {% for option in question.options %}
+                            <button class="quiz__option" onclick="quizOptionSelected(this, '{{ option.onSelection }}')" {% if option.color %}style="background-color: {{ option.color }}" {% endif %}>{{ option.option }}</button>
+                            {% endfor %}
+                        </div>
+                        <div class="quiz__controls">
+                            <button class="prev is-disabled" onclick="goToPreviousQuestion()">< BACK</button>
+                            <button class="restart" onclick="restartQuiz()">RESTART</button>
+                            <button class="next is-disabled" onclick="goToNextQuestion()">FORWARD ></button>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <section class="contact-phone full-width">
+        <div class="contact__information">
+            <h3 class="contact__title">GET YOUR FREE CONSULTATION TODAY</h3>
+            <p class="contact__message">Don’t Panic. Let us help you navigate through the thousands of possible solutions to find the best care for you or your loved ones.</p>
+        </div>
+        <div class="contact__means">
+            <div class="contact__mode contact__mode--phone">
+                <p class="contact__label">CALL US AT</p>
+                <a class="contact__info" href="tel:{{site.data.globals.contactNumberWithoutDashes}}">{{site.data.globals.contactNumber}}</a>
+            </div>
+            <div class="contact__mode contact__mode--input">
+                <p class="contact__label">OR HAVE US CALL YOU BACK</p>
+                <input id="phone-quiz-contactphone" class="contact__input contact__input--white" type="tel" placeholder="Enter your phone number" required>
+                <button class="cta cta--medium cta--orange do-submitPhoneNumber" data-inputId="phone-quiz-contactphone">SUBMIT PHONE NUMBER</button>
+            </div>
+        </div>
+    </section>
+</section>
+<script>
+
+var previousQuestionsStack = [];
+var nextButtonEnabled = false;
+var quizResultUrls = {
+    "failure": "/quiz/not-qualified-for-medicaid/",
+    "success": "/quiz/qualified-for-medicaid/",
+    "neutral": "/quiz/may-qualify-for-medicaid/"
+};
+
+function getTargetSelector(target) {
+    if (target.indexOf('goto') !== -1) {
+        var targetId = target.replace('goto', '').trim();
+        return '[data-question-id=' + targetId + ']';
+    } else {
+        return false;
+    }
+}
+
+function quizOptionSelected(self, target) {
+
+    $(self).siblings().removeClass('is-selected');
+    $(self).siblings().addClass('is-not-selected');
+    $(self).addClass('is-selected');
+    $(self).removeClass('is-not-selected');
+
+    var currentQuizQuestionId = $(self).parents('.quiz__card.visible').attr('data-question-id');
+    previousQuestionsStack.push(currentQuizQuestionId);
+    console.log(previousQuestionsStack);
+
+    goToQuestion(target);
+
+    checkForNextButtonCondition();
+    updatePrevNextButtons();
+}
+
+function checkForNextButtonCondition() {
+    try {
+        if ($('.quiz__card.visible .quiz__options .is-selected').length) {
+            nextButtonEnabled = true;
+        }
+        else {
+            nextButtonEnabled = false;
+        }
+    }
+    catch(err) {
+        console.error(err);
+        nextButtonEnabled = false;
+    }
+}
+
+function updatePrevNextButtons() {
+    if (previousQuestionsStack.length) {
+        $('.quiz__controls .prev').removeClass('is-disabled');
+    } else {
+        $('.quiz__controls .prev').addClass('is-disabled');
+    }
+
+    if (nextButtonEnabled) {
+        $('.quiz__controls .next').removeClass('is-disabled');
+    } else {
+        $('.quiz__controls .next').addClass('is-disabled');
+    }
+}
+
+function goToQuestion(target) {
+    // Remove visible class from all visible elements
+    $('.visible').removeClass('visible');
+    // Get next target li
+    var targetSelector = getTargetSelector(target);
+
+    if (targetSelector) {
+        // Quiz continues
+        var targetElement = $(targetSelector);
+        // Add visible class to target
+        $(targetElement).addClass('visible');
+    }
+    else {
+        // Quiz ends
+        goToResultPage(target);
+    }
+    
+}
+
+function goToResultPage(target) {
+    if (target.indexOf('success') !== -1) {
+        // Success Result Page
+        window.location.href = quizResultUrls.success;
+    } else if (target.indexOf('failure') !== -1) {
+        // Failure Result Page
+        window.location.href = quizResultUrls.failure;
+    } else {
+        // Neutral Result Page
+        window.location.href = quizResultUrls.neutral;
+    }
+}
+
+function goToPreviousQuestion() {
+    var lastQuestionId = previousQuestionsStack.pop();
+    goToQuestion('goto' + lastQuestionId);
+    nextButtonEnabled = true;
+    updatePrevNextButtons();
+}
+
+function goToNextQuestion() {
+    try {
+        $('.quiz__card.visible .quiz__options .is-selected')[0].onclick();
+    }
+    catch(err) {
+        console.error(err);
+    }
+}
+
+function restartQuiz() {
+    window.location.reload();
+}
+
+</script>

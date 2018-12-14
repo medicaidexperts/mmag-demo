@@ -1,0 +1,61 @@
+<footer>
+    <div class="info">
+        <p>© COPYRIGHT 2016 MEDICARE & MEDICAID <br>ADVISORY GROUP · ALL RIGHTS RESERVED</p>
+        <div class="social">
+            <a target="_blank" href="{{site.data.urls.social-facebook}}">
+                <svg class="icon icon-facebook">
+                    <use xlink:href="/assets/svg/social/social-defs.svg#icon-facebook"></use>
+                </svg>
+            </a>
+            <a target="_blank" href="{{site.data.urls.social-twitter}}">
+                <svg class="icon icon-twitter">
+                    <use xlink:href="/assets/svg/social/social-defs.svg#icon-twitter"></use>
+                </svg>
+            </a>
+            <a target="_blank" href="{{site.data.urls.social-youtube}}">
+                <svg class="icon icon-youtube">
+                    <use xlink:href="/assets/svg/social/social-defs.svg#icon-youtube"></use>
+                </svg>
+            </a>
+            <a target="_blank" href="{{site.data.urls.social-linkedin}}">
+                <svg class="icon icon-linkedin">
+                    <use xlink:href="/assets/svg/social/social-defs.svg#icon-linkedin"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="company">
+        <div class="title">Company</div>
+        <div class="links">
+            <a href="{{site.data.urls.about}}">About Us</a>
+            <a href="{{site.data.urls.service}}">Our Services</a>
+            <a href="{{site.data.urls.blog}}">Blog</a>
+            <a href="{{site.data.urls.contact}}">Contact Us</a>
+            <a href="{{site.data.urls.privacy}}">Privacy</a>
+        </div>
+    </div>
+    <div class="services">
+        <div class="title"><a href="{{site.data.urls.service}}">Services</a></div>
+        <div class="links">
+            <a href="{{site.data.urls.service-hse}}">Homecare Services Eligibility</a>
+            <a href="{{site.data.urls.service-ha}}">Healthcare Advisors</a>
+
+        </div>
+    </div>
+</footer>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then(function(registraion) {
+            console.log('Service Worker registered');
+        })
+        .catch(function(err) {
+            console.log('Service Worker registraion failed, error:', err);
+        });
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<!-- <script src="{{ " /assets/js/jquery-3.1.1.min.js " | prepend: site.baseurl }}"></script> -->
+<script src="{{ " /assets/js/sticky.js " | prepend: site.baseurl }}"></script>
+<script src="{{ " /assets/js/main.js " | prepend: site.baseurl }}"></script>
+

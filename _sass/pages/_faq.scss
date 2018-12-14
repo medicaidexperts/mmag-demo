@@ -1,0 +1,45 @@
+.section-wrapper--faq {
+    .faq__questions {
+        margin-top: 2rem;
+        .faq__question {
+            border-radius: 0.3rem;
+            overflow: hidden;
+            &.open {
+                margin-bottom: 1rem;
+                border-radius: 0.3rem 0.3rem 0 0;
+                .faq__answer {
+                    border: 2px solid $teal;
+                }
+            }
+            button {
+                width: 100%;
+                text-align: left;
+                color: white;
+                background: $teal;
+                outline: 0;
+                border: 0;
+                margin: 0.3rem 0 0;
+                border-radius: 0.3rem 0.3rem 0 0;
+                font-size: 1.9rem;
+                line-height: 1.5;
+            }
+            .faq__answer {
+                border: 2px solid transparent;
+                border-radius: 0 0 0.3rem 0.3rem;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                p {
+                    border: 0;
+                }
+                ul {
+                    list-style-type: disc;
+                    margin-left: 2rem;
+                    border: 0;
+                }
+                strong {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}

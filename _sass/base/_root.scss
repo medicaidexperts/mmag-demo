@@ -1,0 +1,50 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html { box-sizing: border-box; }
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, ::before, ::after { box-sizing: border-box; }
+
+html, body {
+    font-family: $fontSanSerif;
+    font-size: 62.5%;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 160rem;
+    margin: 0 auto;
+}
+
+// Debugging
+html, body {
+    @include desktop {
+        // background-color: yellow;
+        font-size: 10px;
+    }
+    @include laptop {
+        // background-color: cyan;
+        font-size: 9.2px;
+    }
+    @include tablet {
+        // background-color: lightgreen;
+        font-size: 8.7px;
+    }
+    @include mobileLarge {
+        // background-color: pink;
+        font-size: 8.2px;
+    }
+    @include mobileMedium {
+        // background-color: skyblue;
+        font-size: 7.8px;
+    }
+    @include mobileSmall {
+        // background-color: greenyellow;
+        font-size: 7.2px;
+    }
+    
+}

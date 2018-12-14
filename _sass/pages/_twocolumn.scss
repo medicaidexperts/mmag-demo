@@ -1,0 +1,110 @@
+.twocolumn-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 70vh;
+    @include mobileLarge {
+        flex-direction: column;
+    }
+    .aside {
+        // max-width: 40vw;
+        // min-width: 30vw;
+        min-width: 30vw;
+        width: 30vw;
+        right: 0;
+        @include mobileLarge {
+            max-width: 100vw;
+            width: 100vw;
+            min-width: 100vw;
+        }
+    }
+    .main {
+        flex-grow: 1;
+        padding: 64px $space-horizontal;
+        position: relative;
+        @include tablet {
+            padding: 48px $space-horizontal-smaller;
+        }
+        @include mobileMedium {
+            padding: 32px $space-horizontal-smallest;
+        }
+        .section-wrapper {
+            .section__quote {
+                font-size: 2.2rem;
+                line-height: 1.4;
+                quotes: "\201C""\201D""\2018""\2019";
+                margin: 3.2rem 0px 2rem;
+                padding-left: 3.2rem;
+                &:before {
+                    color: #555;
+                    content:”\201D”;
+                    content: open-quote;
+                    font-size: 3em;
+                    margin-right: 0.25em;
+                    vertical-align: -0.3em;
+                    line-height: 0.3;
+                }
+            }
+            
+            .section-info {
+                max-width: 72rem;
+                margin-bottom: 4rem;
+            }
+            .section__title {
+                font-size: 3.7rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+            }
+            .section__heading {
+                font-size: 2.9rem;
+                font-weight: 600;
+                line-height: 1.3;
+                margin: 20px auto;
+            }
+            .section__desc {
+                font-size: 1.8rem;
+                line-height: 1.5;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .section__desc--content {
+                font-size: 1.8rem;
+                line-height: 1.5;
+                color: rgba(0, 0, 0, 0.6);
+                font-family: $fontSerif;
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.twocolumn-wrapper .main section.our-story.story {
+    padding: 0px;
+    width: 100%;
+    & > a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .story__heading {
+        width: 100%;
+    }
+    .story__title {
+        width: 100%;
+    }
+    .images {
+        width: 100%;
+        max-width: 65rem;
+        margin-right: auto;
+        min-height: 50rem;
+        max-height: 50rem;
+        margin-bottom: 32px;
+        @include mobileSmall {
+            min-height: 320px;
+        }
+    }
+    .story {
+        width: 100%;
+    }
+}

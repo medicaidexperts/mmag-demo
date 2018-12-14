@@ -1,0 +1,49 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Expert Consultation on Medicaid | Medicare And Medicaid Advisory Group
+description: > # this means to ignore newlines until "baseurl:"
+  We help patients and their caregivers navigate the complex process of becoming eligible for Medicare and Medicaid benefits. Find out if you qualify.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://mmag.org" # the base hostname & protocol for your site
+logo: "/assets/images/logo.png"
+logo-social: "/assets/images/logo-social.png"
+
+
+social_twitter: MMAdvisoryGroup
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+      sass_dir:
+           - _sass
+
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - CNAME
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - node_modules
+  - vendor
+
+
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

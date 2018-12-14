@@ -1,0 +1,18 @@
+{
+  "name": "medicaid",
+  "description": "Medicaid Advisory Group",
+  "main": "_config.yml",
+  "authors": [
+  ],
+  "license": "MIT",
+  "keywords": [
+    "medicaid",
+    "website",
+    "jekyll"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "dependencies": {
+    "jquery": "~3.1.1"
+  }
+}
